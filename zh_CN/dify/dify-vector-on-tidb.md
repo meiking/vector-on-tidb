@@ -33,7 +33,7 @@ Cluster 创建完成后，进入刚刚创建完成的 Cluster 详情页。
 2. 在弹出的页面中点击 "Generate Password"
 3. 保存对应的 USERNAME 和 PASSWORD
 
-![](imgs/connect-tidb.png)
+<img src="imgs/connect-tidb.png" width="50%" />
 
 Qdrant 兼容层的接入方式和 TiDB Cloud Serverless 本身的接入方式有一些差别，除了需要记住 USERNAME 和 PASSWORD 之外，这里需要记住 qdrant 接入点。
 - qdrant-gateway01.us-east-1.prod.aws.tidbcloud.com
@@ -85,7 +85,7 @@ docker compose up -d
 
 点击 Dify 平台右上角**头像 → 设置 → 模型供应商**，选择模型供应商，轻点对应模型的"安装"，并且设置相关模型的 API-KEY。
 
-![](imgs/models.png)
+<img src="imgs/models.png" width="50%" />
 
 _如果你不是很了解各类模型怎么使用，推荐安装 **Cohere** 一个模型即可，该模型包含了 Dify 的所需的所有功能。Dify 官方也提供了纯本地化 [Ollama + Deepseek + Dify](https://github.com/langgenius/dify-docs/blob/main/zh_CN/learn-more/use-cases/private-ai-ollama-deepseek-dify.md) 部署方案。_
 
@@ -100,7 +100,7 @@ _如果你不是很了解各类模型怎么使用，推荐安装 **Cohere** 一�
     - 索引方式选择：**高质量**
     - 检索设置选择：**混合检索**
 
-![](imgs/datasets-step2.png)
+<img src="imgs/datasets-step2.png" width="100%" />
 
 索引参数说明：
 - **向量索引**：纯向量的召回策略
@@ -119,30 +119,30 @@ Dify 支持各种复杂的流程，这里只介绍较为简单的 chatflow 流�
 1. 点击 Dify 平台首页左侧的"创建空白应用"，选择"Chatflow"应用并进行简单的命名
 2. 右键添加"添加节点"，选择"知识检索"
 
-![](imgs/chatflow-km.png)
+<img src="imgs/chatflow-km.png" width="30%" />
 
 3. 点击"+"，添加"知识库"
 
-![](imgs/chatflow-km-model.png)
+<img src="imgs/chatflow-km-model.png" width="50%" />
 
 4. 设置"查询变量" `{{#sys.query#}}`
 
-![](imgs/chatflow-km-query.png)
+<img src="imgs/chatflow-km-query.png" width="30%" />
     
 5. 点击"召回设置"，设置模型参数"模型
 
-![](imgs/chatflow-km-rerank-model.png)
+<img src="imgs/chatflow-km-rerank-model.png" width="30%" />
 
 6. 选择"LLM"节点
     - 选择模型
     - 设置"上下文"为`知识检索 - result`
     - 添加系统提示词"SYSTEM"，`{{#sys.query#}}` + `上下文`
 
-![](imgs/chatflow-km-llm.png)
+<img src="imgs/chatflow-km-llm.png" width="30%" />
 
 7. 链接所有节点
 
-![](imgs/chatflow-join.png)
+<img src="imgs/chatflow-join.png" width="60%" />
 
 _过程中，可以使用"预览"进行调试。_
 
@@ -151,7 +151,7 @@ _过程中，可以使用"预览"进行调试。_
 ### 试试刚刚创建 AI Chatflow
 点击顶部菜单中的"探索"，选择刚刚创建的 chatflow，就可以开始使用了。
 
-![](imgs/chat.png)
+<img src="imgs/chat.png" width="60%" />
 
 ## Why Choose TiDB Cloud Serverless
 
