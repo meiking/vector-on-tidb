@@ -1,9 +1,9 @@
 # 私有化部署 Dify + TiDB Cloud Serverless
 ## 概述
-Dify 是一个开源的大语言模型（LLM）应用开发平台，旨在帮助开发者、企业甚至非技术人员快速构建、部署和管理基于 AI 的应用。支持 RAG（检索增强生成），结合外部知识库提升回答准确性。在 Pingcap 官方 blog 中，之前 [Dify.AI x TiDB](https://www.pingcap.com/blog/dify-tidb-build-scalable-ai-agent-with-knowledge-base/) 的这篇文章中有介绍如何在本地部署 Dify + TiDB Serverless 构建 Dify 的知识库。本篇稍有不同，将介绍如何配置基于 qdrant 协议，同时支持 vector + **FTS(Fulltext search)** 的知识库构建。
+Dify 是一个开源的大语言模型（LLM）应用开发平台，旨在帮助开发者、企业甚至非技术人员快速构建、部署和管理基于 AI 的应用。支持 RAG，结合外部知识库提升回答准确性。在 Pingcap 官方 blog 中，之前 [Dify.AI x TiDB](https://www.pingcap.com/blog/dify-tidb-build-scalable-ai-agent-with-knowledge-base/) 的这篇文章中有介绍如何在本地部署 Dify + TiDB Serverless 构建 Dify 的知识库。本篇稍有不同，将介绍如何配置基于 qdrant 协议，同时支持 vector + **FTS(Fulltext search)** 的知识库构建。
 
 ## 前置准备
-_以下为 Dify 官方的推荐环境。_
+_Dify 官方的推荐环境。_
 
 **硬件环境：**
 - CPU >= 2 Core
@@ -25,7 +25,7 @@ _以下为 Dify 官方的推荐环境。_
     - 选择 "Free Cluster" Plan (Free 和 Scalable 两种 Plan 提供相同的功能，可按需选择)
 3. 点击 "Create" 按钮，等待 Cluster 创建完成
 
-![](imgs/create-tidb-cloud-serverless-cluster.png)
+<img src="imgs/create-tidb-cloud-serverless-cluster.png" width="90%" style="border: 1px black;" />
 
 ### 获取 Cluster 信息
 Cluster 创建完成后，进入刚刚创建完成的 Cluster 详情页。
@@ -77,7 +77,7 @@ docker compose up -d
 
 详细说明请参考 [Docker Compose 部署](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)，也可以参考 [源码部署](https://docs.dify.ai/getting-started/install-self-hosted/local-source-code) 方式。
 
-## 开始使用 Dify
+## 配置使用 Dify
 
 和其它常见 ai agent 不同，Dify 支持多模型 + 知识库工作流编排设计。Dify 安装完毕后，需要先准备模型和知识库。
 
@@ -140,15 +140,14 @@ Dify 支持各种复杂的流程，这里只介绍较为简单的 chatflow 流�
 
 <img src="imgs/chatflow-km-llm.png" width="30%" />
 
-7. 链接所有节点
+7. 链接所有节点后，发布
 
 <img src="imgs/chatflow-join.png" width="60%" />
 
-_过程中，可以使用"预览"进行调试。_
+_调试过程中过程中，可以使用"预览"进行调试。_
 
-8. 发布
 
-### 试试刚刚创建 AI Chatflow
+## 试试刚刚创建 AI Chatflow
 点击顶部菜单中的"探索"，选择刚刚创建的 chatflow，就可以开始使用了。
 
 <img src="imgs/chat.png" width="60%" />
