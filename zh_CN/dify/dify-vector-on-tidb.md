@@ -1,6 +1,6 @@
 # 私有化部署 Dify + TiDB Cloud Serverless
 ## 概述
-Dify 是一个开源的大语言模型（LLM）应用开发平台，旨在帮助开发者、企业甚至非技术人员快速构建、部署和管理基于 AI 的应用。支持 RAG，结合外部知识库提升回答准确性。在 Pingcap 官方 blog 中，之前 [Dify.AI x TiDB](https://www.pingcap.com/blog/dify-tidb-build-scalable-ai-agent-with-knowledge-base/) 的这篇文章中有介绍如何在本地部署 Dify + TiDB Serverless 构建 Dify 的知识库。本篇稍有不同，将介绍如何配置基于 Qdrant 协议，同时支持 vector + **FTS(Fulltext search)** 的知识库构建。
+Dify 是一个开源的大语言模型（LLM）应用开发平台，旨在帮助开发者、企业甚至非技术人员快速构建、部署和管理基于 AI 的应用。支持 RAG 结合外部知识库提升回答准确性。在 Pingcap 官方 blog 中，之前 [Dify.AI x TiDB](https://www.pingcap.com/blog/dify-tidb-build-scalable-ai-agent-with-knowledge-base/) 的这篇文章中有介绍如何在本地部署 Dify + TiDB Serverless 构建 Dify 的知识库。本篇稍有不同，将介绍如何配置基于 Qdrant 协议，同时支持 vector + **FTS(Fulltext search)** 的知识库构建。
 
 ## 前置准备
 _Dify 官方的推荐环境。_
@@ -71,7 +71,7 @@ vi docker-compse.yaml # 注释掉 weaviate: 及相关的配置
 docker compose up -d
 ```
 
-等待运行命令后，你应该会看到所有容器的状态和端口映射。
+等待命令运行成功后，你应该会看到所有容器的状态和端口映射。
 - 默认使用的 80 端口，访问登录地址 [http://localhost/install](http://localhost/install)
 - 设置管理员用户名和密码，进入系统
 
@@ -87,7 +87,7 @@ docker compose up -d
 
 <img src="imgs/models.png" width="50%" />
 
-_如果你不是很了解各类模型怎么使用，推荐安装 **Cohere** 一个模型即可，该模型包含了 Dify 的所需的所有功能。Dify 官方也提供了纯本地化 [Ollama + Deepseek + Dify](https://github.com/langgenius/dify-docs/blob/main/zh_CN/learn-more/use-cases/private-ai-ollama-deepseek-dify.md) 部署方案。_
+_如果你不是很了解该如何选择模型，推荐安装 **Cohere** 一个模型即可，该模型包含了 Dify 在此教程中所需的所有基本功能。Dify 官方也提供了纯本地化 [Ollama + Deepseek + Dify](https://github.com/langgenius/dify-docs/blob/main/zh_CN/learn-more/use-cases/private-ai-ollama-deepseek-dify.md) 部署方案。_
 
 ### 准备基于 TiDB Cloud Serverless 的知识库
 以上我们已经配置好 TiDB Serverless 的 Qdrant endpoint，这里我们直接使用 Dify 的"创建知识库"功能。
@@ -107,7 +107,7 @@ _如果你不是很了解各类模型怎么使用，推荐安装 **Cohere** 一�
 - **全文检索**：基于倒排索引的全文检索
 - **混合索引**：基于向量+倒排索引的两路召回，并调用 Rerank 模型排序
 
-_注意，如果你使用的是模型的免费 API-KEY，可能面临 call limited 问题，构建知识库的时候可以使用小文档试试_
+_注意，如果你使用的是模型的免费 API-KEY，可能面临 call limited 问题，构建知识库的时候可以使用小文档试试。如果始终无法解决，可以尝试通过 [ollama](https://ollama.com/) 部署本地大模型的方案。_
 
 **知识库完成后是这样子的。**
 
