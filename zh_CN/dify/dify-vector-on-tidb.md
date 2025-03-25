@@ -72,7 +72,7 @@ docker compose up -d
 ```
 
 等待运行命令后，你应该会看到所有容器的状态和端口映射。
-- 默认使用的 80 端口，访问登录地址 [http://localhost/install]
+- 默认使用的 80 端口，访问登录地址 [http://localhost/install](http://localhost/install)
 - 设置管理员用户名和密码，进入系统
 
 详细说明可以参考 [Docker Compose 部署](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)，也可以参考 [源码部署](https://docs.dify.ai/getting-started/install-self-hosted/local-source-code) 方式。
@@ -144,7 +144,7 @@ Dify 支持各种复杂的流程，这里只介绍一个简单的 chatflow 流�
 
 <img src="imgs/chatflow-join.png" width="60%" />
 
-_调试过程中过程中，可以使用"预览"进行调试。_
+_调试过程中，可以使用"预览"进行调试。_
 
 ## 试试刚刚创建 AI Chatflow
 点击顶部菜单中的"探索"，选择刚刚创建的 chatflow，就可以开始使用了。
