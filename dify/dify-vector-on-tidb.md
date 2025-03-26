@@ -129,7 +129,7 @@ Dify supports various complex workflows. Here, we will only introduce a simple c
 4. Select the `Knowledge Retrieval` node
 - Click the `+` button to add a `Knowledge Base`.
 
-<img src="imgs/chatflow-km-model.png" width="50%" />
+<img src="imgs/chatflow-km-model.png" width="30%" />
 
 - Set the `Query Variable` to `{{#sys.query#}}`.
 
