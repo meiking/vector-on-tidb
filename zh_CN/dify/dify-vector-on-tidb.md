@@ -185,9 +185,3 @@ Dify 适合开发者、企业及AI爱好者，尤其适合需要**快速构建�
 - 支持 RAG（检索增强生成），可直接处理PDF、PPT等文档，简化知识库构建。
 
 <img src="imgs/chat.png" width="60%" />
-
-## Why Choose TiDB Cloud Serverless
-
-## Why Choose Dify?
-
-## Learn More
