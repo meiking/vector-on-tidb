@@ -76,9 +76,7 @@ docker compose up -d
 - 设置管理员用户名和密码，进入系统
 
 详细说明可以参考 [Docker Compose 部署](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)，也可以参考 [源码部署](https://docs.dify.ai/getting-started/install-self-hosted/local-source-code) 方式。
-详细说明可以参考 [Docker Compose 部署](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)，也可以参考 [源码部署](https://docs.dify.ai/getting-started/install-self-hosted/local-source-code) 方式。
 
-## 配置使用 Dify
 ## 配置使用 Dify
 
 和其它常见 ai agent 不同，Dify 支持多模型 + 知识库工作流编排设计。Dify 安装完毕后，需要先准备模型和知识库。
@@ -117,29 +115,22 @@ _注意，如果你使用的是模型的免费 API-KEY，可能面临 call limit
 
 ### 创建 AI Chatflow
 Dify 支持各种复杂的流程，这里只介绍一个简单的 chatflow 流程。
-Dify 支持各种复杂的流程，这里只介绍一个简单的 chatflow 流程。
 
-1. 点击 Dify 平台首页左侧的"创建空白应用"，选择"Chatflow"应用并进行命名
 1. 点击 Dify 平台首页左侧的"创建空白应用"，选择"Chatflow"应用并进行命名
 2. 右键添加"添加节点"，选择"知识检索"
 
 <img src="imgs/chatflow-km.png" width="30%" />
-<img src="imgs/chatflow-km.png" width="30%" />
 
 3. 点击"+"，添加"知识库"
 
-<img src="imgs/chatflow-km-model.png" width="50%" />
 <img src="imgs/chatflow-km-model.png" width="50%" />
 
 4. 设置"查询变量" `{{#sys.query#}}`
 
 <img src="imgs/chatflow-km-query.png" width="30%" />
 
-<img src="imgs/chatflow-km-query.png" width="30%" />
-
 5. 点击"召回设置"，设置模型参数"模型
 
-<img src="imgs/chatflow-km-rerank-model.png" width="30%" />
 <img src="imgs/chatflow-km-rerank-model.png" width="30%" />
 
 6. 选择"LLM"节点
@@ -148,17 +139,13 @@ Dify 支持各种复杂的流程，这里只介绍一个简单的 chatflow 流�
     - 添加系统提示词"SYSTEM"，`{{#sys.query#}}` + `上下文`
 
 <img src="imgs/chatflow-km-llm.png" width="30%" />
-<img src="imgs/chatflow-km-llm.png" width="30%" />
 
 7. 链接所有节点后，发布
-7. 链接所有节点后，发布
 
-<img src="imgs/chatflow-join.png" width="60%" />
 <img src="imgs/chatflow-join.png" width="60%" />
 
 _调试过程中，可以使用"预览"进行调试。_
 
-## 试试刚刚创建 AI Chatflow
 ## 试试刚刚创建 AI Chatflow
 点击顶部菜单中的"探索"，选择刚刚创建的 chatflow，就可以开始使用了。
 
