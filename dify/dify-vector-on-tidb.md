@@ -68,7 +68,7 @@ QDRANT_GRPC_PORT=443
 For the season Dify defaults to using VECTOR_STORE as weaviate and starts a local weaviate container in the docker-compose, you can skip this container. _Alternatively, you can do nothing and run a redundant weaviate container._
 
 ```bash
-vi docker-compse.yaml # 注释掉 weaviate: 及相关的配置
+vi docker-compse.yaml # comment out weaviate: and follow configures
 
 docker compose up -d
 ```
