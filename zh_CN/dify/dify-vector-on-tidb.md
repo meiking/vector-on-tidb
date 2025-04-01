@@ -121,28 +121,31 @@ Dify 支持各种复杂的流程，这里只介绍一个简单的 chatflow 流�
 
 <img src="imgs/chatflow-km.png" width="30%" />
 
-3. 点击"+"，添加"知识库"
+3. 链接所有节点
+
+<img src="imgs/chatflow-join.png" width="60%" />
+
+4. 选择"知识库"节点
+- 点击"+"，添加"知识库"
 
 <img src="imgs/chatflow-km-model.png" width="50%" />
 
-4. 设置"查询变量" `{{#sys.query#}}`
+- 设置"查询变量" `{{#sys.query#}}`
 
 <img src="imgs/chatflow-km-query.png" width="30%" />
 
-5. 点击"召回设置"，设置模型参数"模型
+- 点击"召回设置"，设置模型参数"模型
 
 <img src="imgs/chatflow-km-rerank-model.png" width="30%" />
 
-6. 选择"LLM"节点
-    - 选择模型
-    - 设置"上下文"为`知识检索 - result`
-    - 添加系统提示词"SYSTEM"，`{{#sys.query#}}` + `上下文`
+5. 选择"LLM"节点
+- 选择模型
+- 设置"上下文"为`知识检索 - result`
+- 添加系统提示词"SYSTEM"，`{{#sys.query#}}` + `上下文`
 
 <img src="imgs/chatflow-km-llm.png" width="30%" />
 
-7. 链接所有节点后，发布
-
-<img src="imgs/chatflow-join.png" width="60%" />
+6. 发布
 
 _调试过程中，可以使用"预览"进行调试。_
 
